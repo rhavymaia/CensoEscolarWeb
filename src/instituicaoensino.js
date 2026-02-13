@@ -14,7 +14,7 @@ const insertRowTBody = (instituicaoEnsino) => {
   instituicoesEnsinoTBody.insertAdjacentHTML('beforeend', row);
 };
 
-let instituicoesEnsino = JSON.parse(localStorage.getItem('instituicoesensino'));
+let instituicoesEnsino = JSON.parse(localStorage.getItem('instituicoesensino')) ?? [];
 
 for (let instituicaoEnsino of instituicoesEnsino) {
   insertRowTBody(instituicaoEnsino);
